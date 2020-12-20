@@ -15,8 +15,6 @@ public class AddCountryActivity extends Activity implements View.OnClickListener
     private EditText descEditText;
     private DBManager dbManager;
 
-    
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
