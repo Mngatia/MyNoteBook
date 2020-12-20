@@ -92,8 +92,9 @@ public class CountryListActivity extends AppCompatActivity {
 
         }
 
-    }
+        return super.onOptionsItemSelected(item);
 
 
     }
+
 }
