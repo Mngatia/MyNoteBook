@@ -1,21 +1,18 @@
 package com.example.mynotebook;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 //will display the database record
 
 public class CountryListActivity extends AppCompatActivity {
@@ -49,10 +46,11 @@ public class CountryListActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         //OnclickListener for List Items
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long viewid) {
+
                 TextView idTextView = view.findViewById(R.id.id);
                 TextView titleTextView = view.findViewById(R.id.title);
                 TextView descTextView = view.findViewById(R.id.desc);
@@ -77,7 +75,7 @@ public class CountryListActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
 
     }
